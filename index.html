@@ -1,0 +1,124 @@
+<!-- DEWAGE SAHAN CHATHURA PERERA M22W7351 -->
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="timer-banner" id="timer"></div>
+        <h1>Computer Games and Board Gaming Questionnaire</h1>
+        <h3>DEWAGE SAHAN CHATHURA PERERA M22W7351</h3>
+        <form id="surveyForm">
+            <label for="email">1. Enter your email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="name">2. Enter your name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="gender">3. Select gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="birthdate">4. Select birth day:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+
+            <label for="playAge">5. At what age did you start gaming?</label>
+            <input type="number" id="playAge" name="playAge" required>
+
+            <label for="playFrequency">6. How often do you play games?</label>
+            <select id="playFrequency" name="playFrequency" required>
+                <option value="daily">Daily</option>
+                <option value="severalTimesAWeek">Several times a week</option>
+                <option value="severalTimesAMonth">Several times a month</option>
+            </select>
+
+            <label for="acquireGames">7. How do you prefer to acquire computer games?</label>
+            <select id="acquireGames" name="acquireGames" required>
+                <option value="borrow">I borrow games</option>
+                <option value="buy">I buy games from shops</option>
+                <option value="download">I download games</option>
+                <option value="rent">I rent games from a games club</option>
+            </select>
+
+            <label class="device-label">8. Have you ever played games on any of the devices below?</label>
+            <div class="device-options">
+                <div>
+                    <input type="checkbox" id="pcCheckbox" name="playedDevices[]" value="pc">
+                    <label for="pcCheckbox"> PC</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="laptopCheckbox" name="playedDevices[]" value="laptop">
+                    <label for="laptopCheckbox"> Laptop</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="tabletsCheckbox" name="playedDevices[]" value="tablets">
+                    <label for="tabletsCheckbox"> Tablets</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="mobilePhonesCheckbox" name="playedDevices[]" value="mobilePhones">
+                    <label for="mobilePhonesCheckbox"> Mobile Phones</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="gamesConsolesCheckbox" name="playedDevices[]" value="gamesConsoles">
+                    <label for="gamesConsolesCheckbox"> Games Consoles</label>
+                </div>
+            </div>
+
+            <label for="favoriteComputerGame">9. Please nominate your favourite computer game below:</label>
+            <input type="text" id="favoriteComputerGame" name="favoriteComputerGame">
+
+            <label for="favoriteBoardGame">10. Please nominate your favourite board game below:</label>
+            <input type="text" id="favoriteBoardGame" name="favoriteBoardGame">
+
+            <label for="favoriteCardGame">11. Please nominate your favourite card game below:</label>
+            <input type="text" id="favoriteCardGame" name="favoriteCardGame">
+
+            <label for="monthlySubscription">12. Are you willing to pay for a monthly subscription?</label>
+            <select id="monthlySubscription" name="monthlySubscription" required>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="gamingHours">13. On average, how many hours per week do you spend playing games?</label>
+            <input type="number" id="gamingHours" name="gamingHours" required>
+
+            <label for="preferredGenre">14. What is your preferred genre of games? (Select one or more)</label>
+            <div class="genre-options">
+                <div>
+                    <input type="checkbox" id="action" name="preferredGenre[]" value="action">
+                    <label for="action">Action</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="adventure" name="preferredGenre[]" value="adventure">
+                    <label for="adventure">Adventure</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="strategy" name="preferredGenre[]" value="strategy">
+                    <label for="strategy">Strategy</label>
+                </div>
+                <!-- Add more genre options as needed -->
+            </div>
+
+            <label for="feedback">15. Any additional feedback or comments:</label>
+            <textarea id="feedback" name="feedback"></textarea>
+
+            <button type="button" onclick="submitForm()">Submit</button>
+        </form>
+
+        <div class="error-message" id="errorMessage"></div>
+        <div class="json-output">
+            <label>JSON Output:</label>
+            <textarea id="jsonOutput" readonly></textarea>
+        </div>
+    </div>
+</body>
+</html>
